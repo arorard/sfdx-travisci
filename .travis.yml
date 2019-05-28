@@ -21,6 +21,8 @@ before_install:
 - export PATH=./sfdx/$(pwd):$PATH
 - sfdx --version
 - sfdx plugins --core
+- echo $CONSUMER_KEY
+- echo $PATH
 - sfdx force:auth:jwt:grant --clientid=$CONSUMER_KEY --username=$HUB_USERNAME --jwtkeyfile=assets/server1.key --setdefaultdevhubusername --instanceurl=https://login.salesforce.com
 
 script:
