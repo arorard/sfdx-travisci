@@ -11,9 +11,9 @@ before_install:
 - export SFDX_DOMAIN_RETRY=300
 - export SFDX_DISABLE_APP_HUB=true
 - export SFDX_LOG_LEVEL=DEBUG
-- export CONSUMERKEY=3MVG9ZF4bs_.MkugPeG.lbfpRp5TiyWKCfDoY1_JnBHT1VnabMTb2tE2pCVSykmBJCfDHRNE0VyVYGsH5LcC2
+- export CONSUMERKEY=3MVG9ZF4bs_.MKugPeG.lbfpRp5TiyWKCfDoY1_JnBHT1VnabMTb2tE2pCVSykmBJCfDHRNE0VyVYGsH5LcC2
 - export USERNAME=rajesh.arora@cs.radevhub
-- export CONSUMER_KEY=3MVG9ZF4bs_.MkugPeG.lbfpRp5TiyWKCfDoY1_JnBHT1VnabMTb2tE2pCVSykmBJCfDHRNE0VyVYGsH5LcC2
+- export CONSUMER_KEY=3MVG9ZF4bs_.MKugPeG.lbfpRp5TiyWKCfDoY1_JnBHT1VnabMTb2tE2pCVSykmBJCfDHRNE0VyVYGsH5LcC2
 - export HUB_USERNAME=rajesh.arora@cs.radevhub
 - mkdir sfdx
 - wget -qO- $URL | tar xJ -C sfdx --strip-components 1
