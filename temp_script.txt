@@ -1,3 +1,7 @@
+
+travis env set CONSUMERKEY 3MVG9ZF4bs_.MKugPeG.lbfpRp5TiyWKCfDoY1_JnBHT1VnabMTb2tE2pCVSykmBJCfDHRNE0VyVYGsH5LcC2
+travis env set USERNAME rajesh.arora@cs.radevhub
+
 sudo: true
 os: trusty
 cache: false
@@ -11,6 +15,8 @@ before_install:
 - export SFDX_DOMAIN_RETRY=300
 - export SFDX_DISABLE_APP_HUB=true
 - export SFDX_LOG_LEVEL=DEBUG
+- export CONSUMERKEY=3MVG9ZF4bs_.MKugPeG.lbfpRp5TiyWKCfDoY1_JnBHT1VnabMTb2tE2pCVSykmBJCfDHRNE0VyVYGsH5LcC2
+- export USERNAME=rajesh.arora@cs.radevhub
 - export CONSUMER_KEY=3MVG9ZF4bs_.MKugPeG.lbfpRp5TiyWKCfDoY1_JnBHT1VnabMTb2tE2pCVSykmBJCfDHRNE0VyVYGsH5LcC2
 - export HUB_USERNAME=rajesh.arora@cs.radevhub
 - mkdir sfdx
@@ -21,7 +27,7 @@ before_install:
 - sfdx plugins --core
 - echo $CONSUMER_KEY
 - echo $PATH
-- sfdx force:auth:jwt:grant --clientid=$CONSUMERKEY --username=$USERNAME --jwtkeyfile=assets/server1.key --setdefaultdevhubusername -a HubOrg --instanceurl=https://login.salesforce.com
+- sfdx force:auth:jwt:grant --clientid=$CONSUMER_KEY --username=$HUB_USERNAME --jwtkeyfile=assets/server1.key --setdefaultdevhubusername -a HubOrg --instanceurl=https://login.salesforce.com
 
 script:
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg --wait 5
